@@ -20,5 +20,17 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Test Dosen',
+            'email' => 'test@dosen.com',
+            'password' => 'test',
+            'role' => 'Dosen'
+        ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Test Reviewer',
+            'email' => 'test@reviewer.com',
+            'password' => 'test',
+            'role' => 'Reviewer'
+        ]);
     }
 }

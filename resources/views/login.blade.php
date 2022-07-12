@@ -1,6 +1,6 @@
 <x-layout>
     <div class="h-screen flex justify-center">
-        <div class="basis-1/2 my-auto">
+        <div class="sm:basis-1/2 my-auto">
             <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <img src="{{ asset('logo.png') }}" class="object-contain h-28 mx-auto mb-2"/>
                 <h1 class="text-md mb-4">Sign In Dosen/Reviewer</h1>

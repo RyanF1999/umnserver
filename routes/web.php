@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/login', function () {
-    return view('login');
+Route::group(['middleware' => ['web']], function() {
+    Route::get('/', 'App\Http\Controllers\WelcomeController@welcome');
+    Route::get('/login', 'App\Http\Controllers\WelcomeController@login');
+    Route::get('/login/auth', 'App\Http\Controllers\UserController@login');
+    Route::get('/logout', 'App\Http\Controllers\UserController@logout');
 });
